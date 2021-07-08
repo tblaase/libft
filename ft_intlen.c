@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/21 18:37:26 by tblaase           #+#    #+#             */
-/*   Updated: 2021/07/06 13:41:05 by tblaase          ###   ########.fr       */
+/*   Created: 2021/07/07 13:26:30 by tblaase           #+#    #+#             */
+/*   Updated: 2021/07/08 11:37:22 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+int	ft_intlen(int n)
 {
-	char				*c;
-	unsigned int		i;
+	int	i;
 
-	if (!s)
-		return (0);
 	i = 0;
-	c = malloc(len + 1);
-	if (c == NULL)
-		return (0);
-	if (ft_strlen(s) < start)
+
+	if (n >= 0 && n<= 9)
+		return (1);
+	if (n < 0)
+		n = n * -1;
+	while (n > 0)
 	{
-		c[i] = '\0';
-		return (c);
-	}
-	while (i < len)
-	{
-		c[i] = s[start];
+		n = n / 10;
 		i++;
-		start ++;
 	}
-	c[i] = '\0';
-	return (c);
+	return (i);
 }
