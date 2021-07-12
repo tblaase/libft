@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intlen.c                                        :+:      :+:    :+:   */
+/*   ft_put_unsigned_nbr.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/07 13:26:30 by tblaase           #+#    #+#             */
-/*   Updated: 2021/07/08 16:39:41 by tblaase          ###   ########.fr       */
+/*   Created: 2021/07/08 14:42:21 by tblaase           #+#    #+#             */
+/*   Updated: 2021/07/08 14:50:50 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_intlen(int n)
+#include "libft.h"
+
+void	ft_put_unsigned_nbr(unsigned int a)
 {
-	int	i;
+	char	c;
 
-	i = 0;
-
-	if (n == -2147483648)
-		return(10);
-	if (n >= 0 && n<= 9)
-		return (1);
-	if (n < 0)
+	if (a >= 10)
 	{
-		n = n * -1;
-		i++;
+		ft_put_unsigned_nbr(a / 10);
+		ft_put_unsigned_nbr(a % 10);
 	}
-	while (n > 0)
+	else
 	{
-		n = n / 10;
-		i++;
+		c = a + '0';
+		write(1, &c, 1);
 	}
-	return (i);
 }
