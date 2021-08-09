@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/26 15:06:10 by tblaase           #+#    #+#             */
-/*   Updated: 2021/07/08 14:59:53 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/08/09 15:29:54 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_list
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nelem, size_t elsize);
+void	ft_free(char **p);
 int		ft_intlen(int n);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -52,6 +53,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
 char	*ft_strmapi(const char *s, char (*f) (unsigned int, char));
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strndup(char *input, int n);
+char	*ft_strnjoin(char *s1, char *s2, int n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(const char *s1, const char *set);
