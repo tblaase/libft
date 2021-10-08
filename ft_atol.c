@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/21 13:35:08 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 16:19:11 by tblaase          ###   ########.fr       */
+/*   Created: 2021/09/15 21:19:26 by tblaase           #+#    #+#             */
+/*   Updated: 2021/10/08 17:34:46 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+long long	ft_atol(char *str)
+/* finds the first long long of a string and returns it as long long */
 {
-	unsigned int	i;
-	unsigned char	*a;
-	unsigned char	b;
+	int			c;
+	int			i;
+	long long	x;
 
 	i = 0;
-	b = c;
-	a = (unsigned char *)s;
-	while (i < n)
+	c = 1;
+	x = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\r' || str[i] == '\n'
+		|| str[i] == '\v' || str[i] == '\f')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		if (a[i] == b)
-			return (a + i);
+		if (str[i] == '-')
+			c = -1;
 		i++;
 	}
-	return (0);
+	while (str[i] >= 48 && str[i] <= 57)
+	{
+		x = x * 10 + (str[i] - 48);
+		i++;
+	}
+	return (x * c);
 }

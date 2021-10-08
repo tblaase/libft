@@ -6,13 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 11:26:08 by tblaase           #+#    #+#             */
-/*   Updated: 2021/06/28 20:17:24 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/10/08 17:50:09 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
+/* writes int n to fd */
 {
 	char	c;
 

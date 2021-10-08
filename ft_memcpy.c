@@ -6,11 +6,11 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/19 08:21:38 by tblaase           #+#    #+#             */
-/*   Updated: 2021/06/27 17:34:26 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/10/08 16:19:16 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

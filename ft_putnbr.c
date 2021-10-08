@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/02 13:55:07 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 17:46:19 by tblaase          ###   ########.fr       */
+/*   Created: 2021/10/08 16:52:22 by tblaase           #+#    #+#             */
+/*   Updated: 2021/10/08 16:53:57 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
-/* returns the last element of lst */
+void	ft_putnbr(unsigned int n, char *str, unsigned int i)
+/* write an integer into a string */
 {
-	t_list	*current;
-
-	current = lst;
-	if (current == NULL)
-		return (NULL);
-	while (current->next != NULL)
-		current = current->next;
-	return (current);
+	if (n >= 10)
+	{
+		ft_putnbr(n / 10, str, i - 1);
+		ft_putnbr(n % 10, str, i);
+	}
+	else
+		str[i] = n + '0';
+	i++;
 }

@@ -6,19 +6,21 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 13:26:30 by tblaase           #+#    #+#             */
-/*   Updated: 2021/07/08 16:39:41 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/10/08 17:36:53 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_intlen(int n)
+/* counts the digits of an int */
 {
 	int	i;
 
 	i = 0;
-
 	if (n == -2147483648)
-		return(10);
-	if (n >= 0 && n<= 9)
+		return (10);
+	if (n >= 0 && n <= 9)
 		return (1);
 	if (n < 0)
 	{

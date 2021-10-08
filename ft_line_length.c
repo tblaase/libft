@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_line_length.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/02 13:55:07 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 17:46:19 by tblaase          ###   ########.fr       */
+/*   Created: 2021/10/06 15:42:17 by tblaase           #+#    #+#             */
+/*   Updated: 2021/10/08 15:09:49 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
-/* returns the last element of lst */
+int	ft_line_length(int fd)
+/* this function will find the length of the first line in a file */
 {
-	t_list	*current;
+	char	buffer[1];
+	int		length;
+	int		bytes;
 
-	current = lst;
-	if (current == NULL)
-		return (NULL);
-	while (current->next != NULL)
-		current = current->next;
-	return (current);
+	buffer[0] = '\0';
+	bytes = 1;
+	length = 0;
+	while (bytes == 1)
+	{
+		bytes = read(fd, buffer, 1);
+		if (buffer[0] != '\n')
+			length++;
+		else
+			break ;
+	}
+	return (length);
 }

@@ -6,13 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 11:00:28 by tblaase           #+#    #+#             */
-/*   Updated: 2021/06/28 15:56:55 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/10/08 17:50:26 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
+/* writes s to fd */
 {
 	int		i;
 	char	c;

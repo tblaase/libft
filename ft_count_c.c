@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_count_c.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/02 13:55:07 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 17:46:19 by tblaase          ###   ########.fr       */
+/*   Created: 2021/10/06 14:01:45 by tblaase           #+#    #+#             */
+/*   Updated: 2021/10/06 14:05:47 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
-/* returns the last element of lst */
+int	ft_count_c(char *s, char c)
+/* will count appearances of c inside s and return them as integer */
 {
-	t_list	*current;
+	int	i;
+	int	x;
 
-	current = lst;
-	if (current == NULL)
-		return (NULL);
-	while (current->next != NULL)
-		current = current->next;
-	return (current);
+	i = 0;
+	x = 0;
+	if (!s)
+		return (-1);
+	while (s && s[i])
+	{
+		if (s[i++] == c)
+			x++;
+	}
+	return (x);
 }

@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 13:46:19 by tblaase           #+#    #+#             */
-/*   Updated: 2021/06/30 14:06:55 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/10/08 16:15:41 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 static int	ft_find_c(const char *s, char c, int i)
 /* finds the next occurance of char c */
 {
-	while (s[i] != c && s[i])
+	while (s[i] && s[i] != c)
 		i++;
 	return (i);
 }
 
 static unsigned int	ft_count_words(const char *s, char c)
-/* count the number of words within the given string */
+/* count the number of "words" within the given string */
 {
 	int	str_nbr;
 	int	i;
 
-	if (!s[0])
+	if (!s)
 		return (0);
 	str_nbr = 0;
 	i = 0;
@@ -50,6 +50,7 @@ static unsigned int	ft_count_words(const char *s, char c)
 
 static void	ft_write_words(const char *s, char c, char **mainstr,
 	unsigned int b)
+/* will write the single "words" into the char **mainstr */
 {
 	unsigned int	a;
 	unsigned int	i;
@@ -71,16 +72,17 @@ static void	ft_write_words(const char *s, char c, char **mainstr,
 }
 
 char	**ft_split(const char *s, char c)
+/* will split into single strings after every delimiter c */
 {
 	char			**mainstr;
 	unsigned int	b;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	b = ft_count_words(s, c);
 	mainstr = (char **)malloc(b * sizeof(char *) + 1 * sizeof(char *));
-	if (mainstr == '\0')
-		return (0);
+	if (!mainstr)
+		return (NULL);
 	ft_write_words(s, c, mainstr, b);
 	return (mainstr);
 }

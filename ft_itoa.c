@@ -6,42 +6,11 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 15:03:24 by tblaase           #+#    #+#             */
-/*   Updated: 2021/06/28 16:15:40 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/10/08 17:36:04 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_count_n(int n)
-{
-	int	i;
-
-	i = 0;
-	if (n == 0)
-		return (1);
-	if (n == -2147483648)
-		return (10);
-	if (n < 0)
-		n = n * -1;
-	while (n >= 1)
-	{
-		n = n / 10;
-		i++;
-	}
-	return (i);
-}
-
-static void	ft_putnbr(int n, char *str, unsigned int i)
-{
-	if (n >= 10)
-	{
-		ft_putnbr(n / 10, str, i - 1);
-		ft_putnbr(n % 10, str, i);
-	}
-	else
-		str[i] = n + '0';
-	i++;
-}
 
 static void	ft_standard(char *str, int i, int n)
 {
@@ -56,11 +25,12 @@ static void	ft_standard(char *str, int i, int n)
 }
 
 char	*ft_itoa(int n)
+/* turns an int into a string */
 {
 	char	*str;
 	int		i;
 
-	i = ft_count_n(n);
+	i = ft_intlen(n);
 	if (n == -2147483648)
 		str = ft_strdup("-2147483648");
 	else
@@ -68,8 +38,8 @@ char	*ft_itoa(int n)
 		if (n < 0)
 			i++;
 		str = malloc(i + 1);
-		if (str == '\0')
-			return (0);
+		if (!str)
+			return (NULL);
 		ft_standard(str, i, n);
 	}
 	return (str);

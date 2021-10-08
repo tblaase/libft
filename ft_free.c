@@ -6,17 +6,15 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:25:52 by tblaase           #+#    #+#             */
-/*   Updated: 2021/08/09 15:26:11 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/10/08 16:32:14 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	ft_free(char **p)
-/* checks if pointer exists and if so, frees it */
+/* free's given pointer and sets it to NULL */
 {
-	if (!*p)
-		return ;
 	free(*p);
 	*p = NULL;
 }
