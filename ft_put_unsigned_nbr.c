@@ -6,14 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/08 14:42:21 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 16:55:21 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:13:32 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_put_unsigned_nbr(unsigned int a)
 /* write a unsigned int to standard out */
+void	ft_put_unsigned_nbr(unsigned int a)
 {
 	char	c;
 

@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 15:03:24 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 17:36:04 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:12:55 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ static void	ft_standard(char *str, int i, int n)
 	ft_putnbr(n, str, i);
 }
 
-char	*ft_itoa(int n)
 /* turns an int into a string */
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		i;

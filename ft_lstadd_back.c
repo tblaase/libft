@@ -6,14 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/02 13:58:34 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 17:40:50 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:13:00 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
 /* adds new to the back of lst */
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current;
 

@@ -6,14 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 16:52:22 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 16:53:57 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:13:46 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(unsigned int n, char *str, unsigned int i)
 /* write an integer into a string */
+void	ft_putnbr(unsigned int n, char *str, unsigned int i)
 {
 	if (n >= 10)
 	{

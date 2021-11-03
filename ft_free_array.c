@@ -6,14 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 17:57:35 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 16:12:16 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:12:28 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free_array(char **str)
 /* will free the given array and set it to NULL */
+void	ft_free_array(char **str)
 {
 	int	i;
 

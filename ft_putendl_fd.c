@@ -6,14 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 11:07:51 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 17:49:45 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:13:39 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
 /* writes s to fd followed by a \n */
+void	ft_putendl_fd(char *s, int fd)
 {
 	int		i;
 	char	c;

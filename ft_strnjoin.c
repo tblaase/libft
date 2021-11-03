@@ -6,14 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:26:52 by tblaase           #+#    #+#             */
-/*   Updated: 2021/08/09 15:27:20 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:14:43 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnjoin(char *s1, char *s2, int n)
 /* joins two strings, second only n chars, first does not have to exist */
+char	*ft_strnjoin(char *s1, char *s2, int n)
 {
 	char	*c;
 	int		i;

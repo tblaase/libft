@@ -6,14 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 14:01:45 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/06 14:05:47 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:12:23 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_c(char *s, char c)
 /* will count appearances of c inside s and return them as integer */
+int	ft_count_c(char *s, char c)
 {
 	int	i;
 	int	x;

@@ -6,14 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/25 11:26:08 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 17:50:09 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:13:44 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
 /* writes int n to fd */
+void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
 

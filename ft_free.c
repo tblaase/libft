@@ -6,14 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:25:52 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 16:32:14 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:12:32 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free(char **p)
 /* free's given pointer and sets it to NULL */
+void	ft_free(char **p)
 {
 	free(*p);
 	*p = NULL;

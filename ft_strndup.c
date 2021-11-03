@@ -6,14 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 15:26:22 by tblaase           #+#    #+#             */
-/*   Updated: 2021/08/09 15:26:44 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:14:40 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strndup(char *input, int n)
 /* duplicates a string until n chars */
+char	*ft_strndup(char *input, int n)
 {
 	char	*output;
 	int		len;

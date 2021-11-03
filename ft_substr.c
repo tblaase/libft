@@ -6,14 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 18:37:26 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 16:29:42 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:14:57 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
 /* will create a string with length len from position start of s */
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char				*c;
 	unsigned int		i;

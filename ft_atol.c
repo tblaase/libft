@@ -6,14 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 21:19:26 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 17:34:46 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:12:14 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long long	ft_atol(char *str)
 /* finds the first long long of a string and returns it as long long */
+long long	ft_atol(char *str)
 {
 	int			c;
 	int			i;

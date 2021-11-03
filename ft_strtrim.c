@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 11:10:45 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 17:53:38 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:14:54 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ static int	ft_end(const char *s1, const char *set)
 	return (i);
 }
 
-char	*ft_strtrim(const char *s1, const char *set)
 /* will trim all appearances of set from the start and the end of s */
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	char			*c;
 	unsigned int	start;

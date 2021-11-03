@@ -6,15 +6,15 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/17 17:04:21 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 16:28:37 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:14:50 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
 /* will return a pointer to the position of last appearance of c in s
 ** will return a pointer to NULL if not found */
+char	*ft_strrchr(const char *s, int c)
 {
 	char	a;
 	int		i;

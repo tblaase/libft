@@ -6,14 +6,14 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 17:55:54 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 16:25:26 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:14:21 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
 /* will malloc for the given string and return adress to that string */
+char	*ft_strdup(const char *s1)
 {
 	int		i;
 	char	*s;
