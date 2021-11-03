@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 16:13:38 by tblaase           #+#    #+#             */
-/*   Updated: 2021/11/03 18:14:18 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 18:19:30 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /* will append s2 to s1
 ** will do nothing if s1 or s2 is NULL
-** this is a modified ft_strjoin, it will ad a '/' between the strings */
+** this is a modified ft_strjoin, it will ad the divider between the strings */
 char	*ft_strcjoin(const char *s1, const char *s2, char divider)
 {
 	char	*c;

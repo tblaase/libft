@@ -6,14 +6,15 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 10:35:44 by tblaase           #+#    #+#             */
-/*   Updated: 2021/11/03 18:14:25 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 20:16:50 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /* will append s2 to s1
-** will do nothing if s2 is NULL */
+** will do nothing if s2 is NULL
+** will free s1 */
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*c;
@@ -39,5 +40,6 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		i2++;
 	}
 	c[i] = '\0';
+	ft_free(&s1);
 	return (c);
 }
