@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/26 15:06:10 by tblaase           #+#    #+#             */
-/*   Updated: 2021/10/08 17:36:23 by tblaase          ###   ########.fr       */
+/*   Updated: 2021/11/03 20:20:10 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ char		*ft_strndup(char *input, int n);
 char		*ft_strnjoin(char *s1, char *s2, int n);
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strrchr(const char *s, int c);
+char		*ft_strstrjoin(const char *s1, const char *s2, char *divider);
 char		*ft_strtrim(const char *s1, const char *set);
 char		*ft_substr(const char *s, unsigned int start, size_t len);
 int			ft_tolower(int c);

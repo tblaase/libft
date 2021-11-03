@@ -6,7 +6,7 @@
 #    By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/26 13:57:50 by tblaase           #+#    #+#              #
-#    Updated: 2021/10/08 16:42:47 by tblaase          ###   ########.fr        #
+#    Updated: 2021/11/03 20:19:38 by tblaase          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ CFILES = 	ft_atoi.c\
 			ft_strnjoin.c\
 			ft_strnstr.c\
 			ft_strrchr.c\
+			ft_strstrjoin.c\
 			ft_strtrim.c\
 			ft_substr.c\
 			ft_tolower.c\
