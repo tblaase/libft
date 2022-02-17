@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/26 15:06:10 by tblaase           #+#    #+#             */
-/*   Updated: 2022/01/27 19:41:16 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/01/27 20:03:09 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,21 @@ char		*ft_substr(const char *s, unsigned int start, size_t len);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 
+// get_next_line
+
+//this part lets you controll the BUFFER_SIZE without adding it when compiling
+//this is really usefull when used inside libft
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
+
+void		ft_free_gnl(char **p);
+int			ft_strlen_gnl(char *s);
+int			ft_strchr_gnl(char *s, int c, int flag);
+char		*ft_strnjoin_gnl(char *s1, char *s2, int n);
+char		*ft_strndup_gnl(char *str, int n);
+void		*ft_calloc_gnl(size_t nelem, size_t elsize);
+char		*ft_update_nl_gnl(char **next_line, int position);
+char		*ft_output_gnl(char **next_line, int position, int bytes);
+char		*get_next_line(int fd);
 #endif
